@@ -5,6 +5,7 @@ import urllib
 import urllib2
 from pyquery import PyQuery
 
+#需要pyquery，ubuntu下可直接执行sudo apt-get install python-pyquery进行安装
 
 USER = 'your_user_name'
 PASSWORD = 'your_password'
