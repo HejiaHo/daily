@@ -1,0 +1,5 @@
+# testing
+
+### NullPointerTester
+* `testAllPublicStaticMethods`
+* `testInstanceMethods`
