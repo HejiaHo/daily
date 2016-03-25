@@ -25,6 +25,8 @@
 
 ### ImmutableSet
 
+### ImmutableList
+
 ### ImmutableBiMap
 一个内容永远不变得`BiMap`，带有更多重要属性的详见`ImmutableCollection`
 
