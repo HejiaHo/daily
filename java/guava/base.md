@@ -13,6 +13,20 @@
 
 
 ### Preconditions
+Gauva提供的一些先决条件检查实用。
+每个方法都有下面三张形式
+* 无参数。异常抛出时不带错误信息
+* 一个`Object`参数。异常抛出时带有错误信息`object.toString()`
+* 一个`String`参数，及任意个附加的`Object`参数，有点类似printf。使用方法类似于：
+`checkArgument(i >= 0, "Argument was %s but expected nonnegative", i);
+checkArgument(i < j, "Expected i < j, but %s > %s", i, j);
+`
 
+* `checkArgument` 检查表达式的结果是否为true。为false时抛出异常`IllegalArgumentException`
 * `checkNotNull` 检查对象是否为空，非空时返回该对象，为空时抛出异常`NullPointerException`
+* `checkState` 检查对象的状态是否为true。为false时抛出异常`IllegalStateException`
+* `checkElementIndex` 检查下标在数组、列表或字符串的长度中是否有效。下标为负数或不小于长度时抛出异常`IndexOutOfBoundsException`。长度为负时抛出异常`IllegalArgumentException`。
+* `checkPositionIndex` 检查下标在数组、列表或字符串的长度中是否有效。下标为负数或大于长度时抛出异常`IndexOutOfBoundsException`。长度为负时抛出异常`IllegalArgumentException`。
+* `checkPositionIndexs` 检查起始和结束下标在数组、列表或字符串的长度中是否有效且是否有序。下标为负数或大于长度、或结束下标小于开始下标时抛出异常`IndexOutOfBoundsException`。长度为负时抛出异常`IllegalArgumentException`。
+
 
